@@ -1,0 +1,115 @@
+Q1. What is an API? Give an example, where an API is used in real life.
+
+APIs are used in web applications to connect user-facing front ends with critical back-end functionality and data.
+example :-
+>APIs are used to deliver material by streaming services such as Spotify and Netflix
+​
+real life example :-
+​
+>Private APIs are used by financial organizations such as banks to track and manage checking accounts, credit cards, and other accounts
+Q2. Give advantages and disadvantages of using API
+
+Advantages:-
+​
+>Personalized Content: API enables businesses to get a clear understanding of the tastes and preferences of the customer. This allows businesses to make personalized recommendations and generate better customer leads and interactions.
+​
+>Automation: One no longer needs to make assumptions and interpretations manually. API does it all for you by managing all the workflow making business processes more productive and efficient.
+​
+>Fraud Prevention: API has various levels of security depending upon the type of API that you use which ensures that only authorized personnel have access to the data generated using API.
+​
+>Improved Competency: The information that is transmitted from one system to another is quickly intercepted and interpreted by API. This level of efficiency ensures information automatically available to every platform which leads to quicker and improved decision making.
+​
+>Adaptability: API can anticipate changes in terms of needs that arise in the due course of business. It used the technology at its disposal to analyze the information present within the system more closely and thus makes the service provisions more flexible.
+​
+​
+disadvantges:-
+​
+> Initial cost - It is more costly to build and maintain APIs over time. This was also true when introducing the idea of SOA over point to point integrations.
+​
+> Potentially different mindset - Culture eats all. Changing gears to think in a API led way takes time and effort.
+​
+> Loss of control - If your previous model was based around a strong ICC the idea of API led connectivity might scare some since they lose the control over integrations and how APIs are used.
+​
+> Security - Often API led connectivity also means you open up your APIs for a larger group than you have done before. Either within your organisation, with partners or even publicly. You need to consider the impact.
+​
+> Higher demands on life-cycle management - If you open up APIs for a larger group than before you need to consider how changes or removal of APIs are handled and communicated with the users and developers.
+​
+Q3. What is a Web API? Differentiate between API and Web API.
+
+Web API is an API as the name suggests, it can be accessed over the web using the HTTP protocol. It is a framework that helps you to create and develop HTTP based RESTFUL services. The web API can be developed by using different technologies such as java, ASP.NET, etc. Web API is used in either a web server or a web browser. Basically Web API is a web development concept. It is limited to Web Application’s client-side and also it does not include a web server or web browser details. If an application is to be used on a distributed system and to provide services on different devices like laptops, mobiles, etc then web API services are used. Web API is the enhanced form of the web application
+​
+difference between API and WEB API :-
+​
+          WEB API                                                     API
+​
+​
+All web services are APIs                               All APIs are not web services.
+​
+                                            
+It supports XML                                         Responses are formatted using Web                                                        API’s MediaTypeFormatter into XML,                                                        JSON, or any other given format.
+​
+​
+You need a SOAP protocol to send                     API has a light-weight architecture.
+or receive and data over the network.
+Therefore it does not have light-weight
+architecture.   
+                                                
+It can be used by any client who understands XML          It can be used by a client who                                                            understands JSON or XML.
+​
+                                             
+Web service uses three styles: REST
+, SOAP, and XML-RPC for communication.                   API can be used for any style of                                                            communication.
+​
+​
+It provides supports only for the HTTP                      It provides support for the 
+protocol                                                     HTTP/s protocol: URL                                                                    Request/Response Headers, etc.
+​
+Q4. Explain REST and SOAP Architecture. Mention shortcomings of SOAP.
+
+REST :- 
+The Representational State Transfer (REST) architectural style is a worldview that elevates information into a first-class element of architectures. REST allows us to achieve the architectural properties of performance, scalability, generality, simplicity, modifiability, and extensibility.
+​
+SOAP :-
+The Representational State Transfer (REST) architectural style is a worldview that elevates information into a first-class element of architectures. REST allows us to achieve the architectural properties of performance, scalability, generality, simplicity, modifiability, and extensibility.
+​
+​
+SHORTCOMINGS OD SOAP :-
+​
+SOAP is used only XML format data in web service, whereas JSON and other lightweight formats are not supported by it. It is slow because it uses XML format, whereas the payload for a simple string message is large. There are no security features in the SOAP specification.
+​
+​
+​
+Q5. Differentiate between REST and SOAP.
+
+REST :-
+​
+>SOAP stands for Simple Object Access Protocol
+​
+>SOAP is a protocol. SOAP was designed with a specification. It includes a WSDL file which has the required information on what the web service does in addition to the location of the web service
+​
+>SOAP cannot make use of REST since SOAP is a protocol and REST is an architectural pattern
+​
+>SOAP requires more bandwidth for its usage. Since SOAP Messages contain a lot of information inside of it, the amount of data transfer using SOAP is generally a lot.
+​
+>SOAP can only work with XML format. As seen from SOAP messages, all data passed is in XML format
+​
+SOAP:-
+​
+>REST stands for Representational State Transfer
+​
+>REST is an Architectural style in which a web service can only be treated as a RESTful service if it follows the constraints of being
+​
+1).Client Server
+2).Stateless
+3).Cacheable
+4).Layered System
+5).Uniform Interface
+​
+>REST can make use of SOAP as the underlying protocol for web services, because in the end it is just an architectural pattern.
+​
+>REST use Uniform Service locators to access to the components on the hardware device. For example, if there is an object which represents the data of an employee hosted on a URL as http://demo.guru99 , the below are some of URI that can exist to access them.
+​
+>REST does not need much bandwidth when requests are sent to the server. REST messages mostly just consist of JSON messages. Below is an example of a JSON message passed to a web server. You can see that the size of the message is comparatively smaller to SOAP.
+​
+>REST permits different data format such as Plain text, HTML, XML, JSON, etc. But the most preferred format for transferring data is JSON.
+​
