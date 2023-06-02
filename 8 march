@@ -1,0 +1,124 @@
+Q1. What is the Probability density function?
+The Probability Density Function (PDF) describes the likelihood of a continuous random variable taking on a specific value or falling within a certain range.
+
+Q2. What are the types of Probability distribution?
+Types of probability distribution
+​
+1 normal/gaussian distribution
+2 bernoulli distribution
+3 uniform distribution
+4 poisson distribution
+5 log normal distribution
+6 binomial distribution
+
+Q3. Write a Python function to calculate the probability density function of a normal distribution with given mean and standard deviation at a given point.
+[1]:
+import math
+​
+def normal_pdf(x, mean, std_dev):
+   coefficient = 1 / (std_dev * math.sqrt(2 * math.pi))
+   exponent = -((x - mean) ** 2) / (2 * (std_dev ** 2))
+   pdf = coefficient * math.exp(exponent)
+   return pdf
+mean = 0
+std_dev = 1
+x = 1.5
+​
+pdf_value = normal_pdf(x, mean, std_dev)
+print(pdf_value)
+​
+0.12951759566589174
+
+Q4. What are the properties of Binomial distribution? Give two examples of events where binomial distribution can be applied.
+* discrete random variable
+* every experiments outcomes is binary
+* The experiments is performed for n times
+​
+example:-
+​
+1. tossing a coin 10 times
+2. rolling a dice 7 times
+
+
+
+Q5. Generate a random sample of size 1000 from a binomial distribution with probability of success 0.4 and plot a histogram of the results using matplotlib.
+[2]:
+import numpy as np
+import matplotlib.pyplot as plt
+​
+# Set the parameters
+n = 1000  # Sample size
+p = 0.4   # Probability of success
+​
+# Generate the random sample
+sample = np.random.binomial(1, p, size=n)
+​
+# Plot the histogram
+plt.hist(sample, bins=2, edgecolor='black')
+plt.xlabel('Success or Failure')
+plt.ylabel('Frequency')
+plt.title('Histogram of Binomial Distribution')
+plt.xticks([0, 1], ['Failure', 'Success'])
+plt.show()
+​
+
+
+
+Q6. Write a Python function to calculate the cumulative distribution function of a Poisson distribution with given mean at a given point.
+[5]:
+import math
+​
+def poisson_cdf(k, mean):
+   cdf = 0.0
+   for i in range(k + 1):
+       cdf += math.exp(-mean) * (mean ** i) / math.factorial(i)
+   return cdf
+mean = 3.5
+k = 2
+​
+cdf_value = poisson_cdf(k, mean)
+print(cdf_value)
+​
+0.3208471988621341
+
+Q7. How Binomial distribution different from Poisson distribution?
+The key difference between a Binomial distribution and a Poisson distribution is that the Binomial distribution models the number of successes in a fixed number of independent trials, while the Poisson distribution models the number of events occurring in a fixed interval of time or space.
+
+Q8. Generate a random sample of size 1000 from a Poisson distribution with mean 5 and calculate the sample mean and variance.
+[6]:
+import numpy as np
+​
+# Set the parameters
+size = 1000  # Sample size
+mean = 5     # Mean of the Poisson distribution
+​
+# Generate the random sample
+sample = np.random.poisson(mean, size)
+​
+# Calculate the sample mean and variance
+sample_mean = np.mean(sample)
+sample_variance = np.var(sample)
+​
+# Print the results
+print("Sample Mean:", sample_mean)
+print("Sample Variance:", sample_variance)
+​
+Sample Mean: 5.06
+Sample Variance: 5.058400000000001
+
+
+
+Q9. How mean and variance are related in Binomial distribution and Poisson distribution?
+In both the Binomial and Poisson distributions, the mean and variance are related, but the nature of their relationship differs.
+​
+For the Binomial distribution, the mean is given by the product of the number of trials (`n`) and the probability of success (`p`). The variance is the product of `n`, `p`, and `1 - p`. As `n` increases, the distribution becomes more symmetric and bell-shaped, and the variance decreases relative to the mean.
+​
+In the Poisson distribution, the mean is equal to the variance. Regardless of the mean value, the Poisson distribution is always symmetric and bell-shaped. As the mean increases, the distribution becomes more spread out, with a larger range of possible values, but the shape remains the same.
+​
+Overall, for the Binomial distribution, the variance depends on both `n` and `p`, while in the Poisson distribution, the variance is solely determined by the mean.
+
+Q10. In normal distribution with respect to mean position, where does the least frequent data appear?
+In a normal distribution, the least frequent data appears in the tails of the distribution, specifically at the extreme ends. The normal distribution is symmetric, with the mean positioned at the center. As we move away from the mean towards the tails, the data becomes increasingly less frequent. The tails of the distribution represent the extreme values, and they occur with decreasing frequency as they move further away from the mean. This is due to the bell-shaped curve nature of the normal distribution, where the majority of the data is concentrated around the mean, and the probability gradually decreases as we move away from the center.
+[ ]:
+​
+
